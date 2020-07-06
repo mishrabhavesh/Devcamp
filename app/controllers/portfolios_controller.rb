@@ -26,10 +26,15 @@ class PortfoliosController < ApplicationController
   def update
     @portfolio_item = Portfolio.find(params[:id])
       if @portfolio_item.update(params.require(:portfolio).permit(:title,:subtitle,:body))
-         redirect_to portfolios_path, notice: '@portfolio_item was successfully updated.'
+         redirect_to portfolios_path, notice: 'portfolio_item was successfully updated.'
       else
          render :edit 
       end
   end
 
+  def destroy
+    @portfolio_item = Portfolio.find(params[:id])
+    @portfolio_item.destroy
+    redirect_to portfolios_path, notice: 'portfolio was successfully destroyed.'
+  end
 end
