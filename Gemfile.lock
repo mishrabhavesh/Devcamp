@@ -65,8 +65,11 @@ GEM
     crass (1.0.6)
     erubi (1.9.0)
     ffi (1.13.1)
+    friendly_id (5.2.5)
+      activerecord (>= 4.0.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    hirb (0.7.3)
     i18n (1.8.3)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.0)
@@ -177,6 +180,8 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
+  friendly_id (~> 5.2.4)
+  hirb (~> 0.7.3)
   jbuilder (~> 2.7)
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
