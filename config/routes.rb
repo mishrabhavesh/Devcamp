@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'contact', to: 'pages#contact'
   get 'about', to: 'pages#about'
-  resources :blogs
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :blogs do
+    member do
+      get :toggle_status
+    end
+  end
 end
